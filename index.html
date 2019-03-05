@@ -9,13 +9,29 @@
 <body>
 
     <header>
-        <h1></h1>
+        <h1>Movies</h1>
     </header>
 
     <main>
 
-        <section>
-        </section>
+       <form id="search-form">
+           <input type="text" name="search" id="search" placeholder="Search Movies">
+           <button>Search</button>
+       </form>
+
+       <section id="pagination">
+           <button id="previous-button">Previous</button>
+           <p><span id="current-apge">1</span> of <span id="total-pages">20</span></p>
+           <button id="next-button">Next</button>
+       </section>
+
+       <section id="movie container">
+            <div id="movie">
+                <h3>title</h3>
+                <img src="https://image.tmdb.org/t/p/w92/btTdmkgIvOi0FFip1sPuZI2oQG6.jpg" alt="img">
+                <h4>2040</h4>
+            </div>
+       </section>
 
     </main>
 <script type="module" src="./src/main.js">  </script>

@@ -2,7 +2,7 @@ const test = QUnit.test;
 
 QUnit.module('movie template');
 
-import { movieTemplate } from '../src/movie.js';
+import { movieTemplate } from '../src/movies.js';
 
 test('movie template makes html', assert => {
     // arrange
@@ -30,7 +30,7 @@ test('movie template makes html', assert => {
     const results = movieTemplate(movie);
     // assert
     assert.htmlEqual(results, `
-    <div id="movie">
+    <div id="movie-poster">
         <h3>Star Wars</h3>
         <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/btTdmkgIvOi0FFip1sPuZI2oQG6.jpg" alt="img">
         <h4>1977</h4>

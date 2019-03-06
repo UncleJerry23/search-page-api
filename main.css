@@ -59,14 +59,15 @@ main {
     background-color: #C52233;
 }
 
-#movie-container {
+#movies-container {
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
 
-#movie {
+#movie-poster {
     height: 210px;
     width: 120px;
     display: flex;
@@ -76,4 +77,9 @@ main {
 
     background-color: #74121D;
     color: white;
+    margin: 10px;
+}
+
+img {
+    width: 70px;
 }

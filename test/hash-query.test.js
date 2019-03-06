@@ -2,13 +2,7 @@ const test = QUnit.test;
 
 QUnit.module('hash');
 
-function writeSearchToQuery(existingQuery, searchTerm) {
-    const searchParams = new URLSearchParams(existingQuery);
-    searchParams.set('searchTerm', searchTerm);
-    searchParams.set('page', 1);
-
-    return searchParams.toString();
-}
+import { writeSearchToQuery } from '../src/hash-query.js';
 
 test('add query to empy hash', assert => {
     // arrange
@@ -30,15 +24,7 @@ test('update existing hash', assert => {
     assert.equal(result, 'searchTerm=harry+potter&page=1');
 });
 
-
-
-
-function writePageToQuery(existingQuery, page) {
-    const searchParams = new URLSearchParams(existingQuery);
-    searchParams.set('page', page);
-
-    return searchParams.toString();
-}
+import { writePageToQuery } from '../src/hash-query.js';
 
 test('write page to query', assert => {
     // arrange
@@ -50,17 +36,7 @@ test('write page to query', assert => {
     assert.equal(result, 'searchTerm=star+wars&page=2');
 });
 
-
-function readFromQuery(query) {
-    const searchParams = new URLSearchParams(query);
-    const pageNumber = parseInt(searchParams.get('page')) || 1;
-    const result = {
-        searchTerm: searchParams.get('searchTerm'),
-        page: pageNumber
-    };
-    return result;
-}
-
+import { readFromQuery } from '../src/hash-query.js';
 
 test('reads options from query', assert => {
     // arrange

@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+input, button, ::placeholder {
+    border: none;
+    padding: 3px;
+    color: #580C1F;
+    font-size: 1em; 
+}
+
+body {
+    background-image: url('./assets/theatre.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    margin: 10px;
+    color: #C52233;
+}
+
+main {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 8% 8% 64%;
+}
+
+#search-form {
+    grid-row-start: 1;
+    grid-column-start: 1;
+
+    display: flex;
+    align-items: center;
+}
+
+#search {
+    margin: 10px;
+    background-color: #C52233;
+}
+
+#search-form button {
+    background-color: #C52233;
+}
+
+#pagination {
+    grid-row-start: 2;
+    grid-column-start: 1;
+
+    display: flex;
+    align-items: center;
+
+    color: #C52233;
+}
+
+#pagination button {
+    margin: 10px;
+    background-color: #C52233;
+}
+
+#movie-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#movie {
+    height: 210px;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    background-color: #74121D;
+    color: white;
+}
